@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Obiettivo</title>
+  <title>Un obiettivo</title>
   <style>
     body {
       margin: 0;
@@ -49,10 +49,14 @@
       color: #0f2027;
       cursor: pointer;
     }
-    #out {
-      margin-top: 18px;
+    #status {
+      margin-top: 16px;
       font-size: 15px;
-      opacity: 0.85;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+    #status.show {
+      opacity: 0.9;
     }
   </style>
 </head>
@@ -73,19 +77,26 @@
     <input id="msg" type="text" placeholder="Scrivi se vuoi farne parte">
 
     <button onclick="send()">Invia</button>
-<script>
-  function send() {
-    const v = document.getElementById("msg").value;
-    if (!v) {
-      alert("Scrivi qualcosa prima di inviare.");
-      return;
-    }
-    const subject = encodeURIComponent("Obiettivo – nuovo messaggio");
-    const body = encodeURIComponent(v);
-    window.location.href =
-      "mailto:faraonenicolafabio@gmail.com?subject=" + subject + "&body=" + body;
-  }
-</script>
 
+    <div id="status">✔ Messaggio pronto</div>
+  </div>
+
+  <script>
+    function send() {
+      const v = document.getElementById("msg").value;
+      if (!v) return;
+
+      const status = document.getElementById("status");
+      status.classList.add("show");
+
+      const subject = encodeURIComponent("Obiettivo – nuovo messaggio");
+      const body = encodeURIComponent(v);
+
+      setTimeout(() => {
+        window.location.href =
+          "mailto:faraonenicolafabio@gmail.com?subject=" + subject + "&body=" + body;
+      }, 600);
+    }
+  </script>
 </body>
 </html>
