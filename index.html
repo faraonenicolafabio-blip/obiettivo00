@@ -73,16 +73,19 @@
     <input id="msg" type="text" placeholder="Scrivi se vuoi farne parte">
 
     <button onclick="send()">Invia</button>
-
-    <div id="out"></div>
-  </div>
-
-  <script>
-    function send() {
-      const v = document.getElementById("msg").value;
-      document.getElementById("out").innerText =
-        v ? "Messaggio ricevuto." : "Scrivi qualcosa per continuare.";
+<script>
+  function send() {
+    const v = document.getElementById("msg").value;
+    if (!v) {
+      alert("Scrivi qualcosa prima di inviare.");
+      return;
     }
-  </script>
+    const subject = encodeURIComponent("Obiettivo – nuovo messaggio");
+    const body = encodeURIComponent(v);
+    window.location.href =
+      "mailto:faraonenicolafabio@gmail.com?subject=" + subject + "&body=" + body;
+  }
+</script>
+
 </body>
 </html>
