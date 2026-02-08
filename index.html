@@ -1,88 +1,129 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Obiettivo</title>
+
   <style>
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: #0f1f24;
+      background-color: #0f2027;
+      background-image: linear-gradient(180deg, #0f2027, #203a43, #2c5364);
       color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .container {
+      max-width: 500px;
       width: 90%;
-      max-width: 420px;
       text-align: center;
     }
 
     h1 {
-      font-size: 2.4rem;
+      font-size: 2.5rem;
       margin-bottom: 1rem;
     }
 
     p {
+      font-size: 1.1rem;
+      line-height: 1.6;
       opacity: 0.9;
-      line-height: 1.5;
-      margin-bottom: 2rem;
     }
 
-    input, textarea, button {
-      width: 100%;
-      padding: 14px;
-      border-radius: 10px;
-      border: none;
-      font-size: 1rem;
-      margin-bottom: 12px;
+    form {
+      margin-top: 2rem;
     }
 
     textarea {
+      width: 100%;
+      padding: 1rem;
+      border-radius: 10px;
+      border: none;
+      font-size: 1rem;
       resize: none;
-      height: 100px;
+      margin-bottom: 1rem;
     }
 
     button {
-      background: white;
-      color: #0f1f24;
+      width: 100%;
+      padding: 1rem;
+      border-radius: 10px;
+      border: none;
+      font-size: 1rem;
       font-weight: bold;
+      background: white;
+      color: #0f2027;
       cursor: pointer;
     }
 
     button:hover {
       opacity: 0.9;
     }
+
+    .thanks {
+      display: none;
+      margin-top: 2rem;
+      font-size: 1.2rem;
+    }
   </style>
 </head>
-<body>
 
+<body>
   <div class="container">
     <h1>Un obiettivo.<br>Una direzione.</h1>
 
     <p>
       Questo progetto nasce per trasformare un’idea in qualcosa di reale.<br>
-      Non promette scorciatoie. Solo un punto di partenza.
-      <br><br>
+      Non promette scorciatoie.<br>
+      Solo un punto di partenza.
+    </p>
+
+    <p>
       This project exists to turn an idea into something real.<br>
       No shortcuts. Just a starting point.
     </p>
 
-    <form action="https://formsubmit.co/faraonenicolafabio@gmail.com" method="POST">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_subject" value="Nuovo messaggio dal sito Obiettivo">
-      <input type="hidden" name="_template" value="table">
+    <form 
+      action="https://formsubmit.co/496db68127aede6560c8a8fa79397a0e" 
+      method="POST"
+      onsubmit="handleSubmit(event)"
+    >
+      <textarea 
+        name="messaggio" 
+        rows="4" 
+        placeholder="Scrivi se vuoi farne parte"
+        required
+      ></textarea>
 
-      <input type="text" name="nome" placeholder="Il tuo nome" required>
-      <textarea name="messaggio" placeholder="Scrivi se vuoi farne parte" required></textarea>
+      <input type="hidden" name="_subject" value="Nuovo messaggio dal sito Obiettivo">
+      <input type="hidden" name="_captcha" value="false">
 
       <button type="submit">Invia</button>
     </form>
+
+    <div class="thanks" id="thanks">
+      Grazie. Il messaggio è arrivato.
+    </div>
   </div>
 
+  <script>
+    function handleSubmit(event) {
+      event.preventDefault();
+      const form = event.target;
+      fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      }).then(() => {
+        form.style.display = "none";
+        document.getElementById("thanks").style.display = "block";
+      });
+    }
+  </script>
 </body>
 </html>
