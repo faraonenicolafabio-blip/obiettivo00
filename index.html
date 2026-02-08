@@ -51,19 +51,23 @@
     }
 
     .coins {
-      font-size: 56px;
-      margin: 24px 0 10px;
       display: flex;
       justify-content: center;
-      gap: 20px;
+      gap: 24px;
+      margin: 24px 0 10px;
     }
 
     .coin-labels {
       display: flex;
       justify-content: center;
-      gap: 24px;
+      gap: 34px;
       font-size: 13px;
       opacity: 0.7;
+    }
+
+    svg {
+      width: 70px;
+      height: 70px;
     }
 
     input, textarea, button {
@@ -106,12 +110,12 @@
 
     <p>
       Un centesimo da solo vale quasi nulla.<br>
-      Ma nel collettivo cambia natura.
+      Nel collettivo, cambia significato.
     </p>
 
     <p>
       Non è una donazione.<br>
-      È una dichiarazione: “io ci sono”.
+      È una scelta.
     </p>
 
     <div class="divider"></div>
@@ -119,9 +123,25 @@
     <h2>Un valore condiviso nel mondo</h2>
 
     <div class="coins">
-      <span>€0,01</span>
-      <span>1¢</span>
-      <span>◯</span>
+
+      <!-- EURO CENT -->
+      <svg viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="45" fill="#b87333"/>
+        <text x="50" y="60" text-anchor="middle" font-size="32" fill="#fff">€1c</text>
+      </svg>
+
+      <!-- PENNY -->
+      <svg viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="45" fill="#a0522d"/>
+        <text x="50" y="60" text-anchor="middle" font-size="32" fill="#fff">1¢</text>
+      </svg>
+
+      <!-- MONETA GLOBALE CASUALE -->
+      <svg viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="45" fill="#777"/>
+        <text x="50" y="60" text-anchor="middle" font-size="28" fill="#fff">1</text>
+      </svg>
+
     </div>
 
     <div class="coin-labels">
@@ -131,13 +151,9 @@
     </div>
 
     <p>
-      In ogni paese esiste un’unità minima di valore.
-    </p>
-
-    <p>
       Cambia la moneta.<br>
-      Cambia il simbolo.<br>
-      Il gesto resta lo stesso.
+      Cambia il paese.<br>
+      Il valore è lo stesso.
     </p>
 
     <div class="divider"></div>
@@ -145,7 +161,7 @@
     <h2>Partecipazioni</h2>
 
     <p>
-      Persone che hanno risposto <strong>SÌ</strong> via mail.
+      Persone che hanno detto <strong>SÌ</strong> via mail.
     </p>
 
     <div style="font-size:48px; font-weight:bold; margin:20px 0;">
@@ -153,7 +169,7 @@
     </div>
 
     <p class="small">
-      Una sola volta. Una sola scelta.
+      Una sola volta. Da ognuno.
     </p>
 
     <div class="divider"></div>
