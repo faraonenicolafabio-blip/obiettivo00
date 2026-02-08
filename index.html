@@ -36,10 +36,10 @@
       border-radius: 8px;
       border: none;
       font-size: 16px;
-      margin-top: 20px;
+      margin-top: 24px;
     }
     button {
-      margin-top: 16px;
+      margin-top: 18px;
       width: 100%;
       padding: 14px;
       border-radius: 8px;
@@ -50,7 +50,7 @@
       cursor: pointer;
     }
     #status {
-      margin-top: 16px;
+      margin-top: 18px;
       font-size: 15px;
       opacity: 0;
       transition: opacity 0.4s ease;
@@ -66,19 +66,22 @@
 
     <p>
       Questo progetto nasce per trasformare un’idea in qualcosa di reale.<br>
-      Non promette scorciatoie. Solo un punto di partenza.
+      Non promette scorciatoie.
     </p>
 
     <p>
-      This project exists to turn an idea into something real.<br>
-      No shortcuts. Just a starting point.
+      If you are here, you are probably looking for something.<br>
+      Write what, and why.
     </p>
 
-    <input id="msg" type="text" placeholder="Scrivi se vuoi farne parte">
+    <input
+      id="msg"
+      type="text"
+      placeholder="Cosa stai cercando, davvero?">
 
     <button onclick="send()">Invia</button>
 
-    <div id="status">✔ Messaggio pronto</div>
+    <div id="status">Messaggio pronto.</div>
   </div>
 
   <script>
@@ -86,16 +89,15 @@
       const v = document.getElementById("msg").value;
       if (!v) return;
 
-      const status = document.getElementById("status");
-      status.classList.add("show");
+      document.getElementById("status").classList.add("show");
 
-      const subject = encodeURIComponent("Obiettivo – nuovo messaggio");
+      const subject = encodeURIComponent("Obiettivo – contatto");
       const body = encodeURIComponent(v);
 
       setTimeout(() => {
         window.location.href =
           "mailto:faraonenicolafabio@gmail.com?subject=" + subject + "&body=" + body;
-      }, 600);
+      }, 700);
     }
   </script>
 </body>
