@@ -2,128 +2,132 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Obiettivo</title>
 
   <style>
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background-color: #0f2027;
-      background-image: linear-gradient(180deg, #0f2027, #203a43, #2c5364);
-      color: white;
-      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      background-color: #0f1f24;
+      color: #ffffff;
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: center;
-    }
-
-    .container {
-      max-width: 500px;
-      width: 90%;
+      padding: 40px 20px;
       text-align: center;
     }
 
     h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
+      font-size: 2.4rem;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
     }
 
     p {
-      font-size: 1.1rem;
+      max-width: 600px;
       line-height: 1.6;
-      opacity: 0.9;
+      margin-bottom: 16px;
+      color: #e0e0e0;
+    }
+
+    .project {
+      margin-top: 40px;
     }
 
     form {
-      margin-top: 2rem;
+      margin-top: 40px;
+      width: 100%;
+      max-width: 400px;
     }
 
-    textarea {
+    input, textarea {
       width: 100%;
-      padding: 1rem;
-      border-radius: 10px;
+      padding: 14px;
+      margin-bottom: 14px;
+      border-radius: 8px;
       border: none;
       font-size: 1rem;
-      resize: none;
-      margin-bottom: 1rem;
     }
 
     button {
       width: 100%;
-      padding: 1rem;
-      border-radius: 10px;
-      border: none;
+      padding: 14px;
       font-size: 1rem;
-      font-weight: bold;
-      background: white;
-      color: #0f2027;
+      border: none;
+      border-radius: 8px;
+      background-color: #ffffff;
+      color: #0f1f24;
       cursor: pointer;
     }
 
     button:hover {
       opacity: 0.9;
     }
-
-    .thanks {
-      display: none;
-      margin-top: 2rem;
-      font-size: 1.2rem;
-    }
   </style>
 </head>
 
 <body>
-  <div class="container">
-    <h1>Un obiettivo.<br>Una direzione.</h1>
+
+  <!-- INTRO -->
+  <h1>Un obiettivo.<br>Una direzione.</h1>
+
+  <p>
+    Questo progetto nasce per trasformare un’idea in qualcosa di reale.
+    Non promette scorciatoie.
+    Solo un punto di partenza.
+  </p>
+
+  <p>
+    This project exists to turn an idea into something real.
+    No shortcuts.
+    Just a starting point.
+  </p>
+
+  <!-- PROGETTO -->
+  <section class="project">
+    <h2>Il progetto del centesimo</h2>
 
     <p>
-      Questo progetto nasce per trasformare un’idea in qualcosa di reale.<br>
-      Non promette scorciatoie.<br>
-      Solo un punto di partenza.
+      Questo progetto nasce da un’idea semplice.
+      Se 100.000 persone mettono <strong>1 centesimo</strong>,
+      non cambia il loro conto.
+      Ma può cambiare una direzione.
     </p>
 
     <p>
-      This project exists to turn an idea into something real.<br>
-      No shortcuts. Just a starting point.
+      Non è una raccolta fondi tradizionale.
+      È un segnale.
+      Un modo per dire: <em>ci sono anch’io</em>.
     </p>
 
-    <form 
-      action="https://formsubmit.co/496db68127aede6560c8a8fa79397a0e" 
-      method="POST"
-      onsubmit="handleSubmit(event)"
-    >
-      <textarea 
-        name="messaggio" 
-        rows="4" 
-        placeholder="Scrivi se vuoi farne parte"
-        required
-      ></textarea>
+    <p>
+      Il valore non è il denaro.
+      È il numero.
+      È il gesto.
+    </p>
 
-      <input type="hidden" name="_subject" value="Nuovo messaggio dal sito Obiettivo">
-      <input type="hidden" name="_captcha" value="false">
+    <p>
+      Se vuoi farne parte, scrivilo.
+      Quando saremo in molti, il progetto prenderà forma.
+    </p>
+  </section>
 
-      <button type="submit">Invia</button>
-    </form>
+  <!-- FORM -->
+  <form action="https://formsubmit.co/496db68127aede6560c8a8fa79397a0e" method="POST">
+    <input type="hidden" name="_subject" value="Nuovo messaggio dal sito Obiettivo">
+    <input type="hidden" name="_captcha" value="false">
 
-    <div class="thanks" id="thanks">
-      Grazie. Il messaggio è arrivato.
-    </div>
-  </div>
+    <input type="text" name="nome" placeholder="Il tuo nome" required>
+    <textarea name="messaggio" placeholder="Scrivi se vuoi farne parte" rows="4" required></textarea>
 
-  <script>
-    function handleSubmit(event) {
-      event.preventDefault();
-      const form = event.target;
-      fetch(form.action, {
-        method: "POST",
-        body: new FormData(form),
-        headers: { 'Accept': 'application/json' }
-      }).then(() => {
-        form.style.display = "none";
-        document.getElementById("thanks").style.display = "block";
-      });
-    }
-  </script>
+    <button type="submit">Invia</button>
+  </form>
+
 </body>
 </html>
