@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Obiettivo</title>
-
   <style>
     body {
       margin: 0;
-      padding: 0;
-      background: #0e1f26;
-      color: #ffffff;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #0f1f24;
+      color: white;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -19,42 +17,39 @@
     }
 
     .container {
+      width: 90%;
       max-width: 420px;
-      width: 100%;
-      padding: 20px;
       text-align: center;
     }
 
     h1 {
-      font-size: 32px;
-      margin-bottom: 20px;
+      font-size: 2.4rem;
+      margin-bottom: 1rem;
     }
 
     p {
-      font-size: 16px;
-      line-height: 1.6;
       opacity: 0.9;
-      margin-bottom: 25px;
+      line-height: 1.5;
+      margin-bottom: 2rem;
     }
 
-    input {
+    input, textarea, button {
       width: 100%;
       padding: 14px;
-      font-size: 16px;
       border-radius: 10px;
       border: none;
+      font-size: 1rem;
       margin-bottom: 12px;
-      box-sizing: border-box;
+    }
+
+    textarea {
+      resize: none;
+      height: 100px;
     }
 
     button {
-      width: 100%;
-      padding: 14px;
-      font-size: 16px;
-      border-radius: 10px;
-      border: none;
-      background: #ffffff;
-      color: #0e1f26;
+      background: white;
+      color: #0f1f24;
       font-weight: bold;
       cursor: pointer;
     }
@@ -62,46 +57,32 @@
     button:hover {
       opacity: 0.9;
     }
-
-    #messaggio {
-      margin-top: 20px;
-      font-size: 15px;
-      color: #a8ffb0;
-      display: none;
-    }
   </style>
 </head>
-
 <body>
+
   <div class="container">
     <h1>Un obiettivo.<br>Una direzione.</h1>
 
     <p>
       Questo progetto nasce per trasformare un’idea in qualcosa di reale.<br>
       Non promette scorciatoie. Solo un punto di partenza.
-    </p>
-
-    <p>
+      <br><br>
       This project exists to turn an idea into something real.<br>
       No shortcuts. Just a starting point.
     </p>
 
-    <input id="testo" type="text" placeholder="Scrivi se vuoi farne parte" />
+    <form action="https://formsubmit.co/faraonenicolafabio@gmail.com" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_subject" value="Nuovo messaggio dal sito Obiettivo">
+      <input type="hidden" name="_template" value="table">
 
-    <button onclick="invia()">Invia</button>
+      <input type="text" name="nome" placeholder="Il tuo nome" required>
+      <textarea name="messaggio" placeholder="Scrivi se vuoi farne parte" required></textarea>
 
-    <div id="messaggio">Messaggio ricevuto. Sei dentro.</div>
+      <button type="submit">Invia</button>
+    </form>
   </div>
 
-  <script>
-    function invia() {
-      const valore = document.getElementById("testo").value;
-
-      if (valore.trim() !== "") {
-        document.getElementById("messaggio").style.display = "block";
-        document.getElementById("testo").value = "";
-      }
-    }
-  </script>
 </body>
 </html>
