@@ -1,64 +1,70 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Obiettivo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- FAVICON -->
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" href="coins.png">
 
   <style>
     body {
       margin: 0;
+      padding: 0;
       background: #0e1c23;
       color: #ffffff;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      display: flex;
+      justify-content: center;
     }
 
-    main {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+    .container {
+      max-width: 600px;
+      padding: 60px 24px;
       text-align: center;
-      padding: 40px 20px;
     }
 
     h1 {
-      font-size: 2.6rem;
-      margin-bottom: 20px;
+      font-size: 38px;
+      margin-bottom: 24px;
     }
 
     p {
-      max-width: 640px;
-      font-size: 1.1rem;
+      font-size: 18px;
       line-height: 1.6;
       opacity: 0.9;
-      margin: 12px 0;
+      margin-bottom: 24px;
     }
 
-    img {
-      max-width: 320px;
+    .divider {
+      margin: 48px 0;
+      height: 1px;
+      background: rgba(255,255,255,0.15);
+    }
+
+    .coins {
+      margin: 32px 0;
+    }
+
+    .coins img {
       width: 100%;
-      margin: 30px 0;
+      max-width: 320px;
       border-radius: 12px;
+      opacity: 0.95;
     }
 
     form {
-      width: 100%;
-      max-width: 400px;
-      margin-top: 30px;
+      margin-top: 40px;
     }
 
     input, textarea, button {
       width: 100%;
       padding: 14px;
-      margin-bottom: 12px;
-      border-radius: 10px;
+      margin-bottom: 14px;
+      border-radius: 8px;
       border: none;
-      font-size: 1rem;
+      font-size: 16px;
     }
 
     input, textarea {
@@ -69,91 +75,122 @@
     button {
       background: #ffffff;
       color: #000000;
-      font-weight: 600;
+      font-weight: bold;
       cursor: pointer;
     }
 
     button:hover {
       opacity: 0.9;
     }
+
+    .small {
+      font-size: 14px;
+      opacity: 0.7;
+      margin-top: 24px;
+    }
   </style>
 </head>
 
 <body>
+  <div class="container">
 
-<main>
+    <h1>Un obiettivo.<br>Una direzione.</h1>
 
-  <h1>
-    Un obiettivo.<br>
-    Una direzione.
-  </h1>
+    <p>
+      Questo progetto nasce per trasformare un’idea in qualcosa di reale.<br>
+      Non promette scorciatoie.<br>
+      Solo un punto di partenza.
+    </p>
 
-  <p>
-    Questo progetto nasce per trasformare un’idea in qualcosa di reale.
-    Non promette scorciatoie. Solo un punto di partenza.
-  </p>
+    <p>
+      This project exists to turn an idea into something real.<br>
+      No shortcuts. Just a starting point.
+    </p>
 
-  <p>
-    Chiediamo <strong>un solo centesimo</strong>.  
-    Una sola volta. A una persona.
-  </p>
+    <div class="divider"></div>
 
-  <p>
-    Il centesimo è simbolico nella sua unità.<br>
-    Da solo vale quasi nulla.<br>
-    Ma nel collettivo, quel centesimo cambia natura.
-  </p>
+    <p>
+      Chiediamo un solo centesimo.<br>
+      Una sola volta. A una persona.
+    </p>
 
-  <p>
-    È una scelta consapevole:  
-    nessun sacrificio, nessun obbligo, nessuna promessa vuota.
-  </p>
+    <p>
+      Il centesimo è simbolico nella sua unità.<br>
+      Da solo vale quasi nulla.<br>
+      Ma nel collettivo, quel centesimo cambia natura.
+    </p>
 
-  <p>
-    Un gesto minimo che, sommato ad altri gesti minimi,
-    può diventare una base reale per costruire qualcosa di concreto.
-  </p>
+    <p>
+      È una scelta consapevole:<br>
+      nessun sacrificio,<br>
+      nessun obbligo,<br>
+      nessuna promessa vuota.
+    </p>
 
-  <img src="coins.png" alt="Monete da un centesimo nel mondo">
+    <p>
+      Un gesto minimo che, sommato ad altri gesti minimi,<br>
+      può diventare una base reale per costruire qualcosa di concreto.
+    </p>
 
-  <p>
-    In ogni parte del mondo esiste una moneta simile:
-    1 centesimo, 1 penny, una piccola unità.
-  </p>
+    <div class="divider"></div>
 
-  <p>
-    Diverse forme, stessa idea.
-    Qui non conta la valuta.
-    Conta la partecipazione.
-  </p>
+    <h2>Monete minime, ovunque nel mondo</h2>
 
-  <p>
-    Questo progetto non raccoglie denaro per arricchire qualcuno.
-    Raccoglie adesioni.
-    Presenze.
-    Volontà di esserci dall’inizio.
-  </p>
+    <div class="coins">
+      <img src="coins.png" alt="Monete da un centesimo nel mondo">
+    </div>
 
-  <p>
-    Se vuoi farne parte, anche solo con un “sì”,
-    lascia un messaggio.
-  </p>
+    <p>
+      In ogni parte del mondo esiste una moneta simile:<br>
+      1 centesimo, 1 penny, una piccola unità.
+    </p>
 
-  <!-- FORM -->
-  <form action="https://formsubmit.co/496db68127aede6560c8a8fa79397a0e" method="POST">
+    <p>
+      Diverse forme, stessa idea.<br>
+      Qui non conta la valuta.<br>
+      Conta la partecipazione.
+    </p>
 
-    <input type="hidden" name="_subject" value="Nuovo messaggio dal sito Obiettivo">
-    <input type="hidden" name="_captcha" value="false">
+    <div class="divider"></div>
 
-    <input type="text" name="nome" placeholder="Il tuo nome" required>
+    <h2>Perché un centesimo?</h2>
 
-    <textarea name="messaggio" rows="4" placeholder="Scrivi se vuoi farne parte" required></textarea>
+    <p>
+      Perché è accessibile a chiunque.<br>
+      Perché non pesa su nessuno.<br>
+      Perché non divide.
+    </p>
 
-    <button type="submit">Invia</button>
+    <p>
+      Un centesimo non cambia una vita.<br>
+      Ma milioni di centesimi, messi insieme,<br>
+      possono creare strumenti, progetti, possibilità.
+    </p>
 
-  </form>
+    <p>
+      Questo progetto non raccoglie denaro per arricchire qualcuno.<br>
+      Raccoglie adesioni.<br>
+      Persone che scelgono di dire: <strong>io ci sono</strong>.
+    </p>
 
-</main>
+    <div class="divider"></div>
 
+    <h2>Vuoi farne parte?</h2>
+
+    <form action="https://formsubmit.co/faraonenicolafabio@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="Nuovo messaggio dal sito Obiettivo">
+      <input type="hidden" name="_captcha" value="false">
+
+      <input type="text" name="nome" placeholder="Il tuo nome" required>
+      <textarea name="messaggio" placeholder="Scrivi se vuoi farne parte" rows="4" required></textarea>
+      <button type="submit">Invia</button>
+    </form>
+
+    <p class="small">
+      Un gesto minimo. Una sola volta.<br>
+      Insieme.
+    </p>
+
+  </div>
 </body>
 </html>
