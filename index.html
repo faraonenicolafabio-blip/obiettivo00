@@ -3,67 +3,85 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Obiettivo 00</title>
+  <title>Obiettivo</title>
   <style>
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: white;
+      background: #0f2027;
+      color: #ffffff;
       display: flex;
-      justify-content: center;
       align-items: center;
-      height: 100vh;
+      justify-content: center;
+      min-height: 100vh;
     }
-    .box {
-      background: rgba(0,0,0,0.4);
-      padding: 24px;
-      border-radius: 16px;
-      width: 90%;
-      max-width: 360px;
+    .container {
+      max-width: 420px;
+      padding: 32px;
       text-align: center;
+    }
+    h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      opacity: 0.9;
+      margin-bottom: 16px;
     }
     input {
       width: 100%;
-      padding: 12px;
-      border-radius: 10px;
+      padding: 14px;
+      border-radius: 8px;
       border: none;
-      margin-top: 12px;
       font-size: 16px;
+      margin-top: 20px;
     }
     button {
       margin-top: 16px;
-      padding: 12px;
       width: 100%;
-      border-radius: 10px;
+      padding: 14px;
+      border-radius: 8px;
       border: none;
       font-size: 16px;
-      background: white;
+      background: #ffffff;
+      color: #0f2027;
       cursor: pointer;
     }
-    p {
-      margin-top: 16px;
+    #out {
+      margin-top: 18px;
       font-size: 15px;
+      opacity: 0.85;
     }
   </style>
 </head>
 <body>
-  <div class="box">
-    <h1>Benvenuto 👋</h1>
-    <p>Scrivi qualcosa qui sotto</p>
+  <div class="container">
+    <h1>Un obiettivo.<br>Una direzione.</h1>
 
-    <input type="text" id="testo" placeholder="Scrivi qui...">
+    <p>
+      Questo progetto nasce per trasformare un’idea in qualcosa di reale.<br>
+      Non promette scorciatoie. Solo un punto di partenza.
+    </p>
 
-    <button onclick="mostra()">Invia</button>
+    <p>
+      This project exists to turn an idea into something real.<br>
+      No shortcuts. Just a starting point.
+    </p>
 
-    <p id="risultato"></p>
+    <input id="msg" type="text" placeholder="Scrivi se vuoi farne parte">
+
+    <button onclick="send()">Invia</button>
+
+    <div id="out"></div>
   </div>
 
   <script>
-    function mostra() {
-      const valore = document.getElementById("testo").value;
-      document.getElementById("risultato").innerText =
-        valore ? "Hai scritto: " + valore : "Non hai scritto nulla 🙂";
+    function send() {
+      const v = document.getElementById("msg").value;
+      document.getElementById("out").innerText =
+        v ? "Messaggio ricevuto." : "Scrivi qualcosa per continuare.";
     }
   </script>
 </body>
