@@ -1,81 +1,107 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Obiettivo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
     body {
-      background: #0f1f26;
-      color: white;
-      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #0e1f26;
+      color: #ffffff;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       display: flex;
-      flex-direction: column;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       min-height: 100vh;
-      text-align: center;
-      padding: 20px;
     }
-    input, button {
+
+    .container {
+      max-width: 420px;
       width: 100%;
-      max-width: 320px;
-      padding: 14px;
-      margin-top: 12px;
-      border-radius: 8px;
-      border: none;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    p {
       font-size: 16px;
-    }
-    button {
-      background: white;
-      font-weight: bold;
-    }
-    #feedback {
-      margin-top: 20px;
-      display: none;
+      line-height: 1.6;
       opacity: 0.9;
+      margin-bottom: 25px;
+    }
+
+    input {
+      width: 100%;
+      padding: 14px;
+      font-size: 16px;
+      border-radius: 10px;
+      border: none;
+      margin-bottom: 12px;
+      box-sizing: border-box;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      font-size: 16px;
+      border-radius: 10px;
+      border: none;
+      background: #ffffff;
+      color: #0e1f26;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    #messaggio {
+      margin-top: 20px;
+      font-size: 15px;
+      color: #a8ffb0;
+      display: none;
     }
   </style>
 </head>
 
 <body>
+  <div class="container">
+    <h1>Un obiettivo.<br>Una direzione.</h1>
 
-  <h1>Un obiettivo.<br>Una direzione.</h1>
+    <p>
+      Questo progetto nasce per trasformare un’idea in qualcosa di reale.<br>
+      Non promette scorciatoie. Solo un punto di partenza.
+    </p>
 
-  <p>
-    Questo progetto nasce per trasformare un’idea in qualcosa di reale.<br>
-    Non promette scorciatoie. Solo un punto di partenza.
-  </p>
+    <p>
+      This project exists to turn an idea into something real.<br>
+      No shortcuts. Just a starting point.
+    </p>
 
-  <p>
-    This project exists to turn an idea into something real.<br>
-    No shortcuts. Just a starting point.
-  </p>
+    <input id="testo" type="text" placeholder="Scrivi se vuoi farne parte" />
 
-  <form id="contactForm">
-    <input
-      type="text"
-      id="message"
-      placeholder="Scrivi se vuoi farne parte"
-      required
-    />
-    <button type="submit">Invia</button>
-  </form>
+    <button onclick="invia()">Invia</button>
 
-  <p id="feedback">
-    Messaggio ricevuto. Se ha senso, ci faremo sentire.
-  </p>
+    <div id="messaggio">Messaggio ricevuto. Sei dentro.</div>
+  </div>
 
   <script>
-    const form = document.getElementById("contactForm");
-    const feedback = document.getElementById("feedback");
+    function invia() {
+      const valore = document.getElementById("testo").value;
 
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      feedback.style.display = "block";
-      form.reset();
-    });
+      if (valore.trim() !== "") {
+        document.getElementById("messaggio").style.display = "block";
+        document.getElementById("testo").value = "";
+      }
+    }
   </script>
-
 </body>
 </html>
