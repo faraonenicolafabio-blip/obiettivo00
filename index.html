@@ -23,13 +23,13 @@
 
     h1 {
       font-size: 36px;
-      margin-bottom: 10px;
+      margin-bottom: 14px;
     }
 
     h2 {
       font-size: 22px;
-      margin-top: 40px;
-      margin-bottom: 10px;
+      margin-top: 46px;
+      margin-bottom: 14px;
     }
 
     p {
@@ -38,22 +38,34 @@
       opacity: 0.9;
     }
 
-    .small {
-      font-size: 14px;
-      opacity: 0.7;
-    }
-
     .divider {
-      margin: 40px auto;
+      margin: 44px auto;
       width: 60%;
       height: 1px;
       background: rgba(255,255,255,0.2);
     }
 
     .coins {
-      font-size: 52px;
-      margin: 20px 0;
-      letter-spacing: 18px;
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin: 24px 0 12px;
+    }
+
+    .coins img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: #000;
+    }
+
+    .coin-labels {
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      font-size: 13px;
+      opacity: 0.7;
     }
 
     input, textarea, button {
@@ -85,9 +97,15 @@
     <h1>Un obiettivo.<br>Una direzione.</h1>
 
     <p>
-      Questo progetto nasce da una domanda semplice:<br>
-      cosa succede se molte persone fanno un gesto minimo,
-      tutte insieme?
+      Questo progetto nasce da un’idea semplice:
+      cosa succede se molte persone compiono
+      lo stesso gesto minimo, una sola volta?
+    </p>
+
+    <p>
+      Non parliamo di beneficenza,
+      né di raccolte fondi tradizionali.
+      Parliamo di partecipazione.
     </p>
 
     <div class="divider"></div>
@@ -95,76 +113,57 @@
     <h2>Perché chiediamo un solo centesimo</h2>
 
     <p>
-      Una persona ci ha chiesto:<br>
-      <em>“Perché dovrei donarti un centesimo?”</em>
-    </p>
-
-    <p>
-      È una domanda giusta.
-    </p>
-
-    <p>
-      Chiediamo un solo centesimo perché è l’unità minima del valore.
-      È una cifra che non pesa, non impoverisce, non crea squilibri.
-      Presa singolarmente, non cambia nulla.
+      Il centesimo è l’unità minima del valore.
+      Da solo non cambia nulla.
+      Non pesa.
+      Non mette in difficoltà nessuno.
     </p>
 
     <p>
       Proprio per questo è una scelta libera.
-      Non è una donazione tradizionale.
-      Non è un sacrificio.
-      È un gesto consapevole.
+      Nessun sacrificio.
+      Nessun vincolo.
+      Nessun impegno futuro.
     </p>
 
     <p>
       Il centesimo è simbolico nella sua unità,
       ma nel collettivo cambia natura.
       Sommato a molti altri centesimi,
-      diventa una base reale.
+      diventa una base reale e condivisa.
     </p>
 
     <p>
-      Non chiediamo continuità.<br>
-      Non chiediamo abbonamenti.<br>
-      Non chiediamo impegni futuri.
-    </p>
-
-    <p>
-      Chiediamo una sola cosa, una sola volta:
-      dire <strong>SÌ</strong> a un’idea comune.
+      Chiediamo una sola cosa,
+      una sola volta:
+      dire <strong>SÌ</strong>.
     </p>
 
     <div class="divider"></div>
 
     <h2>Un valore condiviso nel mondo</h2>
 
-    <div class="coins">€ ¢ ◯</div>
+    <div class="coins">
+      <!-- 1 centesimo euro -->
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/1_cent_euro_coin_2007.jpg/480px-1_cent_euro_coin_2007.jpg" alt="1 centesimo euro">
 
-    <p>
-      In ogni parte del mondo esiste una moneta minima:
-      un centesimo, un penny, o un valore equivalente.
-    </p>
+      <!-- 1 penny -->
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/US_One_Cent_Obv.png" alt="1 penny">
 
-    <p>
-      Cambia la valuta.<br>
-      Cambia la forma.<br>
-      Il significato resta lo stesso.
-    </p>
-
-    <div class="divider"></div>
-
-    <h2>Partecipazioni</h2>
-
-    <p>
-      Persone che hanno risposto <strong>SÌ</strong> via mail.
-    </p>
-
-    <div style="font-size:48px; font-weight:bold; margin:20px 0;">
-      1
+      <!-- 1 yen -->
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/1_Yen_coin_2006.jpg/480px-1_Yen_coin_2006.jpg" alt="1 yen">
     </div>
 
-    <p class="small">
-      Una sola volta. Da ognuno.
+    <div class="coin-labels">
+      <span>1 cent €</span>
+      <span>1 penny</span>
+      <span>1 yen</span>
+    </div>
+
+    <p>
+      Cambiano i paesi.
+      Cambiano le monete.
+      Il valore minimo esiste ovunque.
     </p>
 
     <div class="divider"></div>
