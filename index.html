@@ -8,8 +8,7 @@
   <style>
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       background-color: #0f1f24;
       color: #ffffff;
       display: flex;
@@ -25,25 +24,41 @@
     }
 
     h2 {
-      font-size: 1.8rem;
-      margin-bottom: 20px;
+      font-size: 1.9rem;
+      margin: 50px 0 20px;
     }
 
     p {
-      max-width: 600px;
-      line-height: 1.6;
+      max-width: 650px;
+      line-height: 1.7;
       margin-bottom: 16px;
       color: #e0e0e0;
     }
 
-    .project {
-      margin-top: 40px;
+    .highlight {
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+    .counter {
+      margin-top: 30px;
+    }
+
+    .counter .number {
+      font-size: 4rem;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .counter .note {
+      font-size: 0.9rem;
+      opacity: 0.7;
     }
 
     form {
-      margin-top: 40px;
+      margin-top: 50px;
       width: 100%;
-      max-width: 400px;
+      max-width: 420px;
     }
 
     input, textarea {
@@ -64,6 +79,7 @@
       background-color: #ffffff;
       color: #0f1f24;
       cursor: pointer;
+      font-weight: bold;
     }
 
     button:hover {
@@ -78,53 +94,84 @@
   <h1>Un obiettivo.<br>Una direzione.</h1>
 
   <p>
-    Questo progetto nasce per trasformare un’idea in qualcosa di reale.
-    Non promette scorciatoie.
-    Solo un punto di partenza.
+    Questo progetto nasce da una domanda semplice:
+    <span class="highlight">quante persone sono disposte a fare un gesto minimo,
+    reale, per qualcosa che ancora non esiste?</span>
   </p>
 
   <p>
-    This project exists to turn an idea into something real.
-    No shortcuts.
-    Just a starting point.
+    Non è una promessa.
+    Non è una scorciatoia.
+    È un punto di partenza.
   </p>
 
   <!-- PROGETTO -->
-  <section class="project">
-    <h2>Il progetto del centesimo</h2>
+  <h2>Il progetto del centesimo</h2>
 
-    <p>
-      Questo progetto nasce da un’idea semplice.
-      Se 100.000 persone mettono <strong>1 centesimo</strong>,
-      non cambia il loro conto.
-      Ma può cambiare una direzione.
-    </p>
+  <p>
+    Perché un centesimo?
+  </p>
 
-    <p>
-      Non è una raccolta fondi tradizionale.
-      È un segnale.
-      Un modo per dire: <em>ci sono anch’io</em>.
-    </p>
+  <p>
+    Perché <span class="highlight">un centesimo non cambia nulla</span>
+    nella vita di una singola persona.
+    Ma cambia tutto quando diventa un gesto condiviso.
+  </p>
 
-    <p>
-      Il valore non è il denaro.
-      È il numero.
-      È il gesto.
-    </p>
+  <p>
+    Qui non stai finanziando un’idea già confezionata.
+    Non stai comprando una promessa.
+    Non stai pagando qualcuno.
+  </p>
 
-    <p>
-      Se vuoi farne parte, scrivilo.
-      Quando saremo in molti, il progetto prenderà forma.
-    </p>
+  <p>
+    Stai dicendo una cosa sola:
+    <span class="highlight">“Sono disposto a mettere qualcosa di reale,
+    anche minimo, per vedere se siamo in tanti.”</span>
+  </p>
+
+  <p>
+    Il valore non è il denaro.
+    Il valore è il numero delle persone
+    che scelgono di non restare solo spettatori.
+  </p>
+
+  <!-- CONTATORE -->
+  <section class="counter">
+    <h2>Segnali ricevuti</h2>
+
+    <div class="number">7</div>
+
+    <div class="note">
+      Questo numero non è automatico.<br>
+      È aggiornato manualmente.<br>
+      Ogni numero è una persona reale.
+    </div>
   </section>
+
+  <!-- CHIUSURA -->
+  <h2>Cosa succede dopo</h2>
+
+  <p>
+    Quando saremo abbastanza,
+    il progetto prenderà una forma concreta e visibile.
+    Non prima.
+  </p>
+
+  <p>
+    Fino ad allora, esiste solo questo:
+    un’idea,
+    un gesto minimo,
+    e le persone che decidono di esserci.
+  </p>
 
   <!-- FORM -->
   <form action="https://formsubmit.co/496db68127aede6560c8a8fa79397a0e" method="POST">
     <input type="hidden" name="_subject" value="Nuovo messaggio dal sito Obiettivo">
     <input type="hidden" name="_captcha" value="false">
 
-    <input type="text" name="nome" placeholder="Il tuo nome" required>
-    <textarea name="messaggio" placeholder="Scrivi se vuoi farne parte" rows="4" required></textarea>
+    <input type="text" name="nome" placeholder="Il tuo nome (facoltativo)">
+    <textarea name="messaggio" placeholder="Scrivi perché ci sei" rows="4" required></textarea>
 
     <button type="submit">Invia</button>
   </form>
