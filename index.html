@@ -1,85 +1,76 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <title>Obiettivo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- FAVICON -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
 
   <style>
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background-color: #0f1f24;
+      background: #0e1c23;
       color: #ffffff;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    main {
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
+      justify-content: center;
       align-items: center;
-      padding: 40px 20px;
       text-align: center;
+      padding: 40px 20px;
     }
 
     h1 {
-      font-size: 2.4rem;
+      font-size: 2.6rem;
       margin-bottom: 20px;
     }
 
-    h2 {
-      font-size: 1.9rem;
-      margin: 50px 0 20px;
-    }
-
     p {
-      max-width: 680px;
-      line-height: 1.7;
-      margin-bottom: 16px;
-      color: #e0e0e0;
+      max-width: 640px;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      opacity: 0.9;
+      margin: 12px 0;
     }
 
-    .highlight {
-      font-weight: bold;
-      color: #ffffff;
-    }
-
-    .counter {
-      margin-top: 40px;
-    }
-
-    .counter .number {
-      font-size: 4rem;
-      font-weight: bold;
-      margin: 10px 0;
-    }
-
-    .counter .note {
-      font-size: 0.9rem;
-      opacity: 0.7;
+    img {
+      max-width: 320px;
+      width: 100%;
+      margin: 30px 0;
+      border-radius: 12px;
     }
 
     form {
-      margin-top: 60px;
       width: 100%;
-      max-width: 420px;
+      max-width: 400px;
+      margin-top: 30px;
+    }
+
+    input, textarea, button {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 12px;
+      border-radius: 10px;
+      border: none;
+      font-size: 1rem;
     }
 
     input, textarea {
-      width: 100%;
-      padding: 14px;
-      margin-bottom: 14px;
-      border-radius: 8px;
-      border: none;
-      font-size: 1rem;
+      background: #ffffff;
+      color: #000000;
     }
 
     button {
-      width: 100%;
-      padding: 14px;
-      font-size: 1rem;
-      border: none;
-      border-radius: 8px;
-      background-color: #ffffff;
-      color: #0f1f24;
+      background: #ffffff;
+      color: #000000;
+      font-weight: 600;
       cursor: pointer;
-      font-weight: bold;
     }
 
     button:hover {
@@ -90,140 +81,79 @@
 
 <body>
 
-  <!-- INTRO -->
-  <h1>Un obiettivo.<br>Una direzione.</h1>
+<main>
+
+  <h1>
+    Un obiettivo.<br>
+    Una direzione.
+  </h1>
 
   <p>
-    Questo progetto nasce da una domanda semplice:
-    <span class="highlight">
-      cosa succede se molte persone compiono
-      lo stesso gesto minimo, una sola volta?
-    </span>
+    Questo progetto nasce per trasformare un’idea in qualcosa di reale.
+    Non promette scorciatoie. Solo un punto di partenza.
   </p>
 
   <p>
-    Non è una promessa.
-    Non è una raccolta fondi tradizionale.
-    È un processo.
-  </p>
-
-  <!-- PROCESSO -->
-  <h2>Il processo del centesimo</h2>
-
-  <p>
-    Qui chiediamo <span class="highlight">un centesimo</span>,
-    una sola volta,
-    a ogni persona che decide di partecipare.
+    Chiediamo <strong>un solo centesimo</strong>.  
+    Una sola volta. A una persona.
   </p>
 
   <p>
-    Il centesimo, preso singolarmente,
-    non ha valore economico.
-    È simbolico nella sua unità.
+    Il centesimo è simbolico nella sua unità.<br>
+    Da solo vale quasi nulla.<br>
+    Ma nel collettivo, quel centesimo cambia natura.
   </p>
 
   <p>
-    Ma quando lo stesso gesto viene compiuto
-    da molte persone,
-    quel centesimo cambia natura.
+    È una scelta consapevole:  
+    nessun sacrificio, nessun obbligo, nessuna promessa vuota.
   </p>
 
   <p>
-    Non diventa importante per quanto vale,
-    ma per <span class="highlight">quante volte viene scelto</span>.
+    Un gesto minimo che, sommato ad altri gesti minimi,
+    può diventare una base reale per costruire qualcosa di concreto.
+  </p>
+
+  <img src="coins.png" alt="Monete da un centesimo nel mondo">
+
+  <p>
+    In ogni parte del mondo esiste una moneta simile:
+    1 centesimo, 1 penny, una piccola unità.
   </p>
 
   <p>
-    Questo progetto non misura il denaro.
-    Misura una decisione condivisa:
-    partecipare con qualcosa di reale,
-    anche minimo,
-    una sola volta.
+    Diverse forme, stessa idea.
+    Qui non conta la valuta.
+    Conta la partecipazione.
   </p>
 
   <p>
-    Il valore nasce nel collettivo.
-    Non dall’importo,
-    ma dal numero di persone
-    che fanno lo stesso gesto.
-  </p>
-
-  <!-- FORMA -->
-  <h2>Che forma prenderà il progetto</h2>
-
-  <p>
-    La forma del progetto non è decisa in anticipo.
-    Ed è una scelta precisa.
+    Questo progetto non raccoglie denaro per arricchire qualcuno.
+    Raccoglie adesioni.
+    Presenze.
+    Volontà di esserci dall’inizio.
   </p>
 
   <p>
-    Prima serve una cosa sola:
-    <span class="highlight">un numero reale di persone</span>
-    che abbiano compiuto lo stesso gesto minimo.
+    Se vuoi farne parte, anche solo con un “sì”,
+    lascia un messaggio.
   </p>
-
-  <p>
-    Quel numero rende possibile una forma concreta,
-    condivisa,
-    legittima.
-  </p>
-
-  <p>
-    Senza il numero,
-    qualsiasi forma sarebbe arbitraria.
-  </p>
-
-  <!-- PERCHÉ -->
-  <h2>Perché chiediamo un centesimo</h2>
-
-  <p>
-    Il centesimo non serve a finanziare qualcuno.
-    Non serve a comprare nulla.
-    Non serve a promettere un ritorno.
-  </p>
-
-  <p>
-    Serve a trasformare un’idea astratta
-    in un fatto misurabile.
-  </p>
-
-  <p>
-    È l’unità minima reale:
-    uguale per tutti,
-    accessibile a chiunque,
-    richiesta una sola volta.
-  </p>
-
-  <p>
-    Il centesimo non è il valore.
-    È il passaggio
-    tra essere d’accordo
-    ed esserci davvero.
-  </p>
-
-  <!-- CONTATORE -->
-  <section class="counter">
-    <h2>Segnali ricevuti</h2>
-
-    <div class="number">7</div>
-
-    <div class="note">
-      Questo numero non è automatico.<br>
-      È aggiornato manualmente.<br>
-      Ogni numero è una persona reale.
-    </div>
-  </section>
 
   <!-- FORM -->
   <form action="https://formsubmit.co/496db68127aede6560c8a8fa79397a0e" method="POST">
+
     <input type="hidden" name="_subject" value="Nuovo messaggio dal sito Obiettivo">
     <input type="hidden" name="_captcha" value="false">
 
-    <input type="text" name="nome" placeholder="Il tuo nome (facoltativo)">
-    <textarea name="messaggio" placeholder="Scrivi perché partecipi" rows="4" required></textarea>
+    <input type="text" name="nome" placeholder="Il tuo nome" required>
+
+    <textarea name="messaggio" rows="4" placeholder="Scrivi se vuoi farne parte" required></textarea>
 
     <button type="submit">Invia</button>
+
   </form>
+
+</main>
 
 </body>
 </html>
