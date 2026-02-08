@@ -2,103 +2,80 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
+  <title>Obiettivo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Un obiettivo</title>
   <style>
     body {
-      margin: 0;
+      background: #0f1f26;
+      color: white;
       font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-      background: #0f2027;
-      color: #ffffff;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       min-height: 100vh;
-    }
-    .container {
-      max-width: 420px;
-      padding: 32px;
       text-align: center;
+      padding: 20px;
     }
-    h1 {
-      font-size: 32px;
-      margin-bottom: 20px;
-    }
-    p {
-      font-size: 16px;
-      line-height: 1.6;
-      opacity: 0.9;
-      margin-bottom: 16px;
-    }
-    input {
+    input, button {
       width: 100%;
+      max-width: 320px;
       padding: 14px;
+      margin-top: 12px;
       border-radius: 8px;
       border: none;
       font-size: 16px;
-      margin-top: 24px;
     }
     button {
-      margin-top: 18px;
-      width: 100%;
-      padding: 14px;
-      border-radius: 8px;
-      border: none;
-      font-size: 16px;
-      background: #ffffff;
-      color: #0f2027;
-      cursor: pointer;
+      background: white;
+      font-weight: bold;
     }
-    #status {
-      margin-top: 18px;
-      font-size: 15px;
-      opacity: 0;
-      transition: opacity 0.4s ease;
-    }
-    #status.show {
+    #feedback {
+      margin-top: 20px;
+      display: none;
       opacity: 0.9;
     }
   </style>
 </head>
+
 <body>
-  <div class="container">
-    <h1>Un obiettivo.<br>Una direzione.</h1>
 
-    <p>
-      Questo progetto nasce per trasformare un’idea in qualcosa di reale.<br>
-      Non promette scorciatoie.
-    </p>
+  <h1>Un obiettivo.<br>Una direzione.</h1>
 
-    <p>
-      If you are here, you are probably looking for something.<br>
-      Write what, and why.
-    </p>
+  <p>
+    Questo progetto nasce per trasformare un’idea in qualcosa di reale.<br>
+    Non promette scorciatoie. Solo un punto di partenza.
+  </p>
 
+  <p>
+    This project exists to turn an idea into something real.<br>
+    No shortcuts. Just a starting point.
+  </p>
+
+  <form id="contactForm">
     <input
-      id="msg"
       type="text"
-      placeholder="Cosa stai cercando, davvero?">
+      id="message"
+      placeholder="Scrivi se vuoi farne parte"
+      required
+    />
+    <button type="submit">Invia</button>
+  </form>
 
-    <button onclick="send()">Invia</button>
-
-    <div id="status">Messaggio pronto.</div>
-  </div>
+  <p id="feedback">
+    Messaggio ricevuto. Se ha senso, ci faremo sentire.
+  </p>
 
   <script>
-    function send() {
-      const v = document.getElementById("msg").value;
-      if (!v) return;
+    const form = document.getElementById("contactForm");
+    const feedback = document.getElementById("feedback");
 
-      document.getElementById("status").classList.add("show");
-
-      const subject = encodeURIComponent("Obiettivo – contatto");
-      const body = encodeURIComponent(v);
-
-      setTimeout(() => {
-        window.location.href =
-          "mailto:faraonenicolafabio@gmail.com?subject=" + subject + "&body=" + body;
-      }, 700);
-    }
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      feedback.style.display = "block";
+      form.reset();
+    });
   </script>
+
 </body>
 </html>
