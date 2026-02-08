@@ -52,8 +52,18 @@
 
     .coins {
       font-size: 56px;
-      margin: 20px 0;
-      letter-spacing: 12px;
+      margin: 24px 0 10px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .coin-labels {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      font-size: 13px;
+      opacity: 0.7;
     }
 
     input, textarea, button {
@@ -108,17 +118,26 @@
 
     <h2>Un valore condiviso nel mondo</h2>
 
-    <div class="coins">🪙 🪙 🪙</div>
+    <div class="coins">
+      <span>€0,01</span>
+      <span>1¢</span>
+      <span>◯</span>
+    </div>
+
+    <div class="coin-labels">
+      <span>Europa</span>
+      <span>Penny</span>
+      <span>Altrove</span>
+    </div>
 
     <p>
-      In ogni paese esiste una moneta minima:
-      un centesimo, un penny, o un valore equivalente.
+      In ogni paese esiste un’unità minima di valore.
     </p>
 
     <p>
-      Cambia la forma.<br>
-      Cambia la valuta.<br>
-      Il significato resta.
+      Cambia la moneta.<br>
+      Cambia il simbolo.<br>
+      Il gesto resta lo stesso.
     </p>
 
     <div class="divider"></div>
@@ -134,7 +153,7 @@
     </div>
 
     <p class="small">
-      Numero aggiornato manualmente.
+      Una sola volta. Una sola scelta.
     </p>
 
     <div class="divider"></div>
