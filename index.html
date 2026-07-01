@@ -23,7 +23,7 @@
 
     h1 {
       font-size: 34px;
-      margin-bottom: 10px;
+      margin-bottom: 6px;
     }
 
     h2 {
@@ -36,13 +36,6 @@
       font-size: 16px;
       line-height: 1.7;
       opacity: 0.9;
-    }
-
-    .manifesto {
-      font-size: 18px;
-      line-height: 1.6;
-      font-weight: 500;
-      margin: 24px 0 34px;
     }
 
     .subtitle {
@@ -58,33 +51,51 @@
       background: rgba(255,255,255,0.2);
     }
 
-    input, textarea, button {
-      width: 100%;
-      padding: 14px;
-      margin-top: 12px;
-      border-radius: 10px;
-      border: none;
-      font-size: 16px;
+    .coins {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin: 24px 0 12px;
     }
 
-    input, textarea {
-      background: #ffffff;
-      color: #000;
+    .coins img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: #000;
     }
 
-    button {
-      background: #ffffff;
-      color: #000;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    .legal {
+    .coin-labels {
+      display: flex;
+      justify-content: center;
+      gap: 28px;
       font-size: 13px;
-      opacity: 0.65;
-      line-height: 1.6;
-      margin-top: 40px;
-      text-align: left;
+      opacity: 0.7;
+    }
+
+    /* Stile del nuovo Bottone d'Azione */
+    .cta-button {
+      display: block;
+      width: 100%;
+      padding: 16px;
+      margin-top: 24px;
+      border-radius: 10px;
+      background: #ffffff;
+      color: #0F1F26;
+      font-size: 18px;
+      font-weight: bold;
+      text-decoration: none;
+      box-sizing: border-box;
+      transition: background 0.2s, transform 0.1s;
+    }
+
+    .cta-button:hover {
+      background: #e6f0f3;
+    }
+
+    .cta-button:active {
+      transform: scale(0.98);
     }
   </style>
 </head>
@@ -93,108 +104,78 @@
   <div class="container">
 
     <h1>Progetto da un centesimo</h1>
+    <div class="subtitle">Un gesto minimo. Una scelta comune.</div>
 
-    <div class="manifesto">
-      Non ti sto chiedendo qualcosa.<br>
-      Ti sto chiedendo se vuoi far parte di una dimostrazione.
+    <p>
+      Questo progetto nasce da un’idea semplice:
+      cosa succede se molte persone compiono
+      lo stesso gesto minimo, una sola volta?
+    </p>
+
+    <p>
+      Non parliamo di beneficenza,
+      né di raccolte fondi tradizionali.
+      Parliamo di partecipazione.
+    </p>
+
+    <div class="divider"></div>
+
+    <h2>Perché chiediamo un solo centesimo</h2>
+
+    <p>
+      Il centesimo è l’unità minima del valore.
+      Da solo non cambia nulla.
+      Non pesa.
+      Non mette in difficoltà nessuno.
+    </p>
+
+    <p>
+      Proprio per questo è una scelta libera.
+      Nessun sacrificio.
+      Nessun vincolo.
+      Nessun impegno futuro.
+    </p>
+
+    <p>
+      Il centesimo è simbolico nella sua unità,
+      ma nel collettivo cambia natura.
+      Sommato a molti altri centesimi,
+      diventa una base reale e condivisa.
+    </p>
+
+    <p>
+      Chiediamo una sola cosa,
+      una sola volta:
+      dire <strong>SÌ</strong>.
+    </p>
+
+    <div class="divider"></div>
+
+    <h2>Un valore condiviso nel mondo</h2>
+
+    <div class="coins">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/1_cent_euro_coin_2007.jpg/480px-1_cent_euro_coin_2007.jpg" alt="1 centesimo euro">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/US_One_Cent_Obv.png" alt="1 penny">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/1_Yen_coin_2006.jpg/480px-1_Yen_coin_2006.jpg" alt="1 yen">
+    </div>
+
+    <div class="coin-labels">
+      <span>1 cent €</span>
+      <span>1 penny</span>
+      <span>1 yen</span>
     </div>
 
     <p>
-      Questo progetto nasce da una domanda semplice:
-      è davvero necessario fare grandi cose
-      per dimostrare che qualcosa può funzionare?
-    </p>
-
-    <p>
-      O basta spostare una quantità minima di valore,
-      insieme,
-      una sola volta.
-    </p>
-
-    <div class="divider"></div>
-
-    <h2>Perché un solo centesimo</h2>
-
-    <p>
-      Un centesimo è quasi nulla.
-      Non pesa.
-      Non mette in difficoltà.
-      Non cambia la vita di nessuno.
-    </p>
-
-    <p>
-      Proprio per questo è libero.
-      Chiunque può farlo.
-      Ovunque.
-      Senza dover credere in qualcosa.
-    </p>
-
-    <p>
-      Da solo è irrilevante.
-      Ma spostato da molte persone,
-      nello stesso periodo,
-      dimostra che il movimento è possibile.
-    </p>
-
-    <div class="divider"></div>
-
-    <h2>Cosa dimostra questo progetto</h2>
-
-    <p>
-      Questo progetto non nasce
-      per finanziare un’idea già definita.
-    </p>
-
-    <p>
-      Nasce per dimostrare che
-      tutto può iniziare anche senza un piano,
-      se esiste una scelta condivisa.
-    </p>
-
-    <p>
-      Un centesimo alla volta
-      non cambia il mondo.
-    </p>
-
-    <p>
-      Ma dimostra che il mondo
-      può essere mosso.
+      Cambiano i paesi.
+      Cambiano le monete.
+      Il valore minimo esiste ovunque.
     </p>
 
     <div class="divider"></div>
 
     <h2>Vuoi farne parte?</h2>
 
-    <form action="https://formsubmit.co/496db68127aede6560c8a8fa79397a0e" method="POST">
-      <input type="hidden" name="_subject" value="Risposta al Progetto da un centesimo">
-      <input type="hidden" name="_captcha" value="false">
-
-      <input type="text" name="nome" placeholder="Il tuo nome" required>
-      <textarea name="messaggio" placeholder="Scrivi SÌ se vuoi partecipare" rows="3" required></textarea>
-
-      <button type="submit">Invia</button>
-    </form>
-
-    <div class="divider"></div>
-
-    <div class="legal">
-      <strong>Trasparenza e natura del contributo</strong><br><br>
-
-      Il <em>Progetto da un centesimo</em> è un’iniziativa indipendente e sperimentale,
-      promossa da un soggetto titolare di partita IVA.<br><br>
-
-      L’eventuale contributo di <strong>1 centesimo</strong> è volontario,
-      simbolico e non obbligatorio.
-      Non costituisce una donazione,
-      né una raccolta fondi a scopo benefico,
-      né dà diritto a beni, servizi o benefici economici in cambio.<br><br>
-
-      Il contributo rappresenta esclusivamente
-      una partecipazione simbolica
-      e una dimostrazione concreta
-      della possibilità di agire insieme
-      a partire da un gesto minimo.
-    </div>
+    <a href="#" class="cta-button">Partecipa al Progetto</a>
 
   </div>
 </body>
